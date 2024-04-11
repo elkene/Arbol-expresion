@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "FUGAS",
+      "setup": "sudo apt-get install valgrind && make fuga && valgrind --log-file=fuga.txt ./Main",
+      "run": "grep -o \"no leaks\" fuga.txt",
+      "input": "",
+      "output": "no leaks",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
